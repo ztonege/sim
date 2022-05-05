@@ -1,0 +1,10 @@
+experiments
+data/*.beton
+data/*.ffcv
+**/__pycache__
+
+runners/cifar
+runners/imagenet
+
+trained_models
+**.pt

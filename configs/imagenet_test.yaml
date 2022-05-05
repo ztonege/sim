@@ -1,0 +1,39 @@
+data:
+  gpu: 0
+  in_memory: 1
+  num_workers: 16
+  train_dataset: data/train_400_0.1_90.ffcv
+  val_dataset: data/val_400_0.1_90.ffcv
+dist:
+  world_size: 1
+experiment:
+  root: experiments
+  task: classification
+  dataset: imagenet
+  model_type: original
+  log_level: 1
+lr:
+  lr: 0.5
+  lr_peak_epoch: 2
+  lr_schedule_type: cyclic
+resolution:
+  end_ramp: 13
+  max_res: 192
+  min_res: 160
+  start_ramp: 11
+training:
+  batch_size: 128
+  bn_wd: 0
+  distributed: 0
+  epochs: 16
+  label_smoothing: 0.1
+  momentum: 0.9
+  optimizer: sgd
+  weight_decay: 5e-5
+  eval_only: True
+validation:
+  lr_tta: true
+  resolution: 256
+  batch_size: 128
+  shift: 32
+  model_path: experiments/classification/imagenet/original/2022-04-22 14:30:50.674736/imagenet_original.pt

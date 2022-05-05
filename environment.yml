@@ -1,0 +1,30 @@
+name: aam
+
+channels:
+  - nvidia
+  - pytorch
+  - conda-forge
+  - anaconda
+  - defaults
+
+dependencies:
+  - python=3.9
+  - cupy
+  - pkg-config
+  - compilers
+  - libjpeg-turbo
+  - opencv
+  - pytorch
+  - torchvision
+  - cudatoolkit=11.3
+  - tensorboard
+  - numba
+  - pip
+  - pip:
+      - ffcv
+      - antialiased-cnns
+      - torchmetrics
+
+  - pre_commit
+  - black
+  - flake8
